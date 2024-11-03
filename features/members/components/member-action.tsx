@@ -4,6 +4,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useDeleteMember } from "@/features/members/api/use-delete-member";
@@ -88,6 +89,7 @@ export const MemberAction = ({
             <User className="mr-2 h-4 w-4" />
             Set as member
           </DropdownMenuItem>
+          <DropdownMenuSeparator className="my-3" />
           <DropdownMenuItem
             className="text-red-600 hover:!text-red-600 border-transparent hover:!bg-red-300/70 rounded-md"
             onClick={onOpen}

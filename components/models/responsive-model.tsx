@@ -18,7 +18,7 @@ import { useMediaQuery } from "usehooks-ts";
 
 interface DialogModalProps {
   isOpen: boolean;
-  title: string;
+  title?: string;
   onClose: (open: boolean) => void;
   onConfirm?: () => void;
   children: React.ReactNode
@@ -28,7 +28,6 @@ export const ResponsiveModel = ({
   isOpen,
   title,
   onClose,
-  onConfirm,
   children
 }: DialogModalProps) => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
