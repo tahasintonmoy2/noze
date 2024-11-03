@@ -184,17 +184,8 @@ const SignUpCard = () => {
                 className="w-full flex items-center"
                 type="button"
               >
-                {isSubmitting || isPending ? (
-                  <div className="flex items-center">
-                    <div className="loader"></div>
-                    <p className="text-white">Loading</p>
-                  </div>
-                ) : (
-                  <>
-                    <FcGoogle className="mr-2 size-5" />
-                    Sign up with Google
-                  </>
-                )}
+                 <FcGoogle className="mr-2 size-5" />
+                 Sign up with Google
               </Button>
             </div>
           </form>
