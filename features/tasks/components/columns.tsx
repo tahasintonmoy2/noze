@@ -19,7 +19,7 @@ export const columns: ColumnDef<Task>[] = [
     header: "Status",
     cell: ({ row }) => {
       const status = row.original.status;
-      return <Badge variant={status}>{snakeCase(status)} </Badge>;
+      return <Badge variant={status} className="truncate">{snakeCase(status)} </Badge>;
     },
   },
   {
@@ -31,7 +31,7 @@ export const columns: ColumnDef<Task>[] = [
       return (
         <div className="flex items-center gap-x-2">
           <MemberAvatar name={assignee.name} />
-          <p>{assignee.name}</p>
+          <p className="truncate">{assignee.name}</p>
         </div>
       );
     },
@@ -45,7 +45,7 @@ export const columns: ColumnDef<Task>[] = [
       return (
         <div className="flex items-center gap-x-2">
           <ProjectAvatar name={project.name} />
-          <p>{project.name}</p>
+          <p className="truncate">{project.name}</p>
         </div>
       );
     },

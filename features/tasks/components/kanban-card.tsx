@@ -23,7 +23,7 @@ export const KanbanCard = ({ task }: KanbanCardProps) => {
           className="size-6 rounded-full"
           fallbackClassName="text-sm"
         />
-        <p>{task.assignee.name}</p>
+        <p className="truncate">{task.assignee.name}</p>
       </div>
       <div className="flex items-center gap-x-1.5">
         <ProjectAvatar
