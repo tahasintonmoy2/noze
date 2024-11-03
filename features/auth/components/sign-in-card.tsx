@@ -105,11 +105,9 @@ const SignInCard = () => {
                             type={isShow ? "text" : "password"}
                             {...field}
                           />
-                          <Button
+                          <button
                             type="button"
-                            variant="ghost"
-                            size="icon"
-                            className="text-muted-foreground absolute right-2 cursor-pointer hover:bg-transparent hover:text-black/75 transition"
+                            className="text-muted-foreground absolute right-2 cursor-pointer"
                             onClick={() => setIsShow(!isShow)}
                           >
                             {isShow ? (
@@ -117,7 +115,7 @@ const SignInCard = () => {
                             ) : (
                               <EyeOff className="h-5 w-5" />
                             )}
-                          </Button>
+                          </button>
                         </div>
                       </>
                     </FormControl>
@@ -137,7 +135,7 @@ const SignInCard = () => {
                   </div>
                 ) : (
                   <>
-                    <p>Lgoin</p>
+                    <p>Login</p>
                   </>
                 )}
               </Button>
@@ -145,26 +143,16 @@ const SignInCard = () => {
                 onClick={() => signUpWithGoogle()}
                 variant="outline"
                 className="w-full flex items-center"
-                disabled={isSubmitting || isPending}
                 type="button"
               >
-                {isSubmitting || isPending ? (
-                  <div className="flex items-center">
-                    <div className="loader"></div>
-                    <p className="text-white">Loading</p>
-                  </div>
-                ) : (
-                  <>
-                    <FcGoogle className="mr-2 size-5" />
-                    Sign up with Google
-                  </>
-                )}
+                 <FcGoogle className="mr-2 size-5" />
+                 Sign In with Google
               </Button>
             </div>
           </form>
         </Form>
         <div className="mt-4 text-center text-sm">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <a href="/auth/sign-up" className="hover:underline text-primary">
             Sign up
           </a>

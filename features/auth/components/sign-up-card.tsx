@@ -129,11 +129,9 @@ const SignUpCard = () => {
                             type={isShow ? "text" : "password"}
                             {...field}
                           />
-                          <Button
+                          <button
                             type="button"
-                            variant="ghost"
-                            size="icon"
-                            className="text-muted-foreground absolute right-2 cursor-pointer hover:bg-transparent hover:text-black/75 transition"
+                            className="text-muted-foreground absolute right-2 cursor-pointer"
                             onClick={() => setIsShow(!isShow)}
                           >
                             {isShow ? (
@@ -141,13 +139,13 @@ const SignUpCard = () => {
                             ) : (
                               <EyeOff className="h-5 w-5" />
                             )}
-                          </Button>
+                          </button>
                         </div>
                       </>
                     </FormControl>
                     {errors.password && (
                       <div className="text-red-600 ml-4">
-                        <p className="text-base">Passowrd must be:</p>
+                        <p className="text-base">Password must be:</p>
                         <ul className="font-extralight text-xs list-disc">
                           <li>Be at least 8 characters long</li>
                           <li>Contain at least one letter</li>
@@ -184,7 +182,6 @@ const SignUpCard = () => {
                 onClick={()=> signUpWithGoogle()}
                 variant="outline"
                 className="w-full flex items-center"
-                disabled={isSubmitting || isPending}
                 type="button"
               >
                 {isSubmitting || isPending ? (
